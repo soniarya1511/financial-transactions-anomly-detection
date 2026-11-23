@@ -1,0 +1,6 @@
+{
+  "value": 0.05782776698470116,
+  "rule": "quantile(1 - 0.01) of calibration-normal scores",
+  "calibration_rows": 10000,
+  "model": "night_4.h5"
+}

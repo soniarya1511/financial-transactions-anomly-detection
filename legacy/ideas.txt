@@ -1,0 +1,25 @@
+Goal :-->
+	research on unsupervised model
+	for pattern detection and derivation from unlabeled transation dataset
+
+Unsupervised clustering
+	This means recognising different properties and creating catergories
+
+To train the model we have to answer two key questions
+
+1) what observations can we measure???
+
+2) How do we wanna represent the world???
+
+
+There are some number of groups called k-clusters
+
+i) AI will predit what does the model expect the world to look like
+	1)Which flowers to cluster because they are the same species
+
+ii) Our AI will correct or learn which will update its beliefs to agree with its 
+	observations of the world
+
+**) We have to initially identiy how many clusters do we want our model to look for
+
+**) For example if we take initially 3 cluster then k = 3

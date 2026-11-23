@@ -1,0 +1,204 @@
+{
+  "data": {
+    "train_rows": 80000,
+    "calibration_normals": 10000,
+    "test_normals": 10000,
+    "test_fraud": 2500
+  },
+  "score_summary": {
+    "train": {
+      "median": 0.03296825289726257,
+      "p99": 0.058038901537656784,
+      "max": 0.07351215183734894
+    },
+    "cal": {
+      "median": 0.0333087220788002,
+      "p99": 0.05782776698470116,
+      "max": 0.07689030468463898
+    },
+    "test": {
+      "median": 0.033221662044525146,
+      "p99": 0.0580492727458477,
+      "max": 0.0751996859908104
+    },
+    "fraud": {
+      "median": 12.341194152832031,
+      "p99": 19.04375648498535,
+      "max": 21.09040069580078
+    }
+  },
+  "roc_auc": 1.0,
+  "average_precision": 1.0,
+  "thresholds": {
+    "fixed_0.05 (third.ipynb)": {
+      "threshold": 0.05,
+      "fpr_normal_test": 0.043,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.19022256039566293
+    },
+    "p96 (api.py)": {
+      "threshold": 0.05063053220510483,
+      "fpr_normal_test": 0.038,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.20999580008399832
+    },
+    "tukey_1.5IQR (third(1).ipynb)": {
+      "threshold": 0.05549068935215473,
+      "fpr_normal_test": 0.0162,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.3840540748137338
+    },
+    "median+3MAD": {
+      "threshold": 0.04962485656142235,
+      "fpr_normal_test": 0.0451,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.1829859649764863
+    },
+    "skew_adjusted_percentile": {
+      "threshold": 0.047219712287187576,
+      "fpr_normal_test": 0.0675,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.13016596160104132
+    },
+    "quantile_fpr1% (adopted)": {
+      "threshold": 0.05782776698470116,
+      "fpr_normal_test": 0.0104,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.4927079227433977
+    }
+  },
+  "checkpoints": {
+    "night_4.h5 (shipped)": {
+      "params": 113620,
+      "val_mse_normal": 0.03401918709278107,
+      "roc_auc": 1.0,
+      "threshold": 0.05782776698470116,
+      "fpr_normal_test": 0.0104,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.4927079227433977
+    },
+    "autoencoder_fraud_detection.h5": {
+      "params": 12036,
+      "val_mse_normal": 0.15301012992858887,
+      "roc_auc": 1.0,
+      "threshold": 0.24566729366779327,
+      "fpr_normal_test": 0.0118,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.4612120653076285
+    },
+    "night_1.h5": {
+      "params": 4764,
+      "val_mse_normal": 0.07843390852212906,
+      "roc_auc": 1.0,
+      "threshold": 0.10912617295980453,
+      "fpr_normal_test": 0.0126,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.44495861884844706
+    },
+    "night_2.h5": {
+      "params": 6342,
+      "val_mse_normal": 0.06939340382814407,
+      "roc_auc": 1.0,
+      "threshold": 0.09924875199794769,
+      "fpr_normal_test": 0.0117,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.4633276189593662
+    },
+    "night_3.h5": {
+      "params": 8402,
+      "val_mse_normal": 0.06686615943908691,
+      "roc_auc": 1.0,
+      "threshold": 0.09643170982599258,
+      "fpr_normal_test": 0.0114,
+      "recall_fraud": 1.0,
+      "precision_at_1%_prevalence": 0.46979235178051304
+    }
+  },
+  "baseline_isolation_forest_roc_auc": 0.99999928,
+  "single_group_recall": {
+    "profile": 1.0,
+    "behaviour": 1.0,
+    "transactions": 1.0,
+    "social": 0.684,
+    "network": 1.0,
+    "security": 1.0,
+    "precomputed_scores": 1.0
+  },
+  "single_feature_recall": {
+    "phone_number_prefix": 1.0,
+    "chargeback_ratio": 1.0,
+    "number_of_failed_transactions": 1.0,
+    "account_suspension_count": 1.0,
+    "fraud_report_count": 1.0,
+    "outlier_score": 1.0,
+    "transaction_pattern_anomaly_score": 1.0,
+    "time_series_anomaly_score": 1.0,
+    "fraud_risk_score": 1.0,
+    "number_of_failed_captcha_attempts": 0.9956,
+    "failed_login_attempts": 0.9784,
+    "number_of_sessions_from_unusual_locations": 0.944,
+    "device_trust_score": 0.9268,
+    "number_of_refunds": 0.9176,
+    "weekend_vs_weekday_activity_ratio": 0.91,
+    "number_of_sessions_per_day": 0.8196,
+    "device_switching_frequency": 0.8016,
+    "login_frequency_per_week": 0.7868,
+    "MAC_address_changes": 0.756,
+    "password_reset_requests": 0.7508,
+    "password_change_frequency": 0.7508,
+    "IP_address_diversity": 0.7448,
+    "packet_loss_rate": 0.7356,
+    "avg_transaction_value": 0.7348,
+    "average_network_latency": 0.6956,
+    "max_transaction_value": 0.6784,
+    "number_of_messages_sent": 0.6548,
+    "total_transactions": 0.5968,
+    "min_transaction_value": 0.176,
+    "VPN_or_Proxy_usage": 0.1296,
+    "time_spent_per_action": 0.0212,
+    "account_creation_date": 0.0184,
+    "most_active_community": 0.0184,
+    "email_domain": 0.018,
+    "payment_methods_used": 0.0176,
+    "session_duration_avg": 0.0168,
+    "engagement_score": 0.016,
+    "number_of_posts": 0.0156,
+    "browser_type": 0.0152,
+    "number_of_friends": 0.0148,
+    "subscription_plan": 0.0132,
+    "OS": 0.0128,
+    "gender": 0.0124,
+    "city": 0.0124,
+    "account_type": 0.0124,
+    "device_type": 0.012,
+    "multi_factor_authentication_enabled": 0.0116,
+    "latitude": 0.0112,
+    "longitude": 0.0112,
+    "age": 0.0108,
+    "country": 0.0108,
+    "most_active_hours": 0.0104
+  },
+  "recall_without_precomputed_scores": 1.0,
+  "top_error_features_fraud": {
+    "chargeback_ratio": 0.17870000004768372,
+    "number_of_failed_transactions": 0.10580000281333923,
+    "phone_number_prefix": 0.09480000287294388,
+    "fraud_risk_score": 0.09040000289678574,
+    "failed_login_attempts": 0.06859999895095825,
+    "number_of_refunds": 0.066600002348423,
+    "fraud_report_count": 0.048500001430511475,
+    "number_of_sessions_from_unusual_locations": 0.039900001138448715,
+    "number_of_failed_captcha_attempts": 0.03920000046491623,
+    "time_series_anomaly_score": 0.033799998462200165
+  },
+  "legacy_api_on_fraud_file": {
+    "flagged_share_p96_rule": 0.04,
+    "flagged_share_frozen_pipeline": 1.0
+  },
+  "legacy_api_on_mixed_batch": {
+    "fraud_rows": 50,
+    "rows": 2050,
+    "fraud_caught_p96_refit": 49,
+    "fraud_caught_frozen": 50
+  }
+}
